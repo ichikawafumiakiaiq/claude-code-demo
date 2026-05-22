@@ -1,0 +1,10 @@
+# グローバル .gitignore で index.html が除外されている環境用の打ち消し
+!index.html
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
