@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | AIQ — 一人一体、デジタルクローンを持つ時代へ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0e0e10;
+      --paper: #f4f1ec;
+      --paper-2: #ebe6dd;
+      --muted: #6a6660;
+      --rule: #cfc8bb;
+      --accent: #1f3a5f;
+      --accent-soft: #b9a37a;
+    }
+    html, body { background: var(--paper); color: var(--ink); }
+    body {
+      font-family: 'Inter', 'Shippori Mincho', serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .serif { font-family: 'Cormorant Garamond', 'Shippori Mincho', serif; }
+    .mincho { font-family: 'Shippori Mincho', serif; }
+    .display {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+    }
+    .display-jp {
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.18;
+    }
+    .small-caps {
+      font-variant-caps: all-small-caps;
+      letter-spacing: 0.28em;
+      font-weight: 500;
+    }
+    .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-variant-numeric: tabular-nums;
+      font-weight: 300;
+    }
+    .rule { border-color: var(--rule); }
+    .ink { color: var(--ink); }
+    .muted { color: var(--muted); }
+    .accent { color: var(--accent); }
+    .bg-ink { background: var(--ink); color: var(--paper); }
+    .bg-ink .muted { color: #a8a39a; }
+    .bg-ink .rule { border-color: #2b2a2c; }
+
+    .grain {
+      background-image: radial-gradient(rgba(20,17,15,0.025) 1px, transparent 1px);
+      background-size: 3px 3px;
+    }
+    .vrule {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+    .hover-underline {
+      background-image: linear-gradient(currentColor, currentColor);
+      background-size: 0% 1px;
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      transition: background-size 0.5s cubic-bezier(0.2,0.7,0.2,1);
+    }
+    .hover-underline:hover { background-size: 100% 1px; }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      line-height: 0.9;
+    }
+    .scribe::before {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+      vertical-align: middle;
+      margin-right: 14px;
+    }
+  </style>
+</head>
+<body class="grain">
+
+  <!-- TOP NAV -->
+  <nav class="border-b rule">
+    <div class="max-w-[1240px] mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+      <a href="#" class="flex items-baseline gap-2">
+        <span class="display text-2xl ink">AIQ</span>
+        <span class="text-[10px] small-caps muted">Humanise AI</span>
+      </a>
+      <div class="hidden md:flex items-center gap-10 text-[11px] small-caps muted">
+        <a href="#vision" class="hover-underline ink">Vision</a>
+        <a href="#technology" class="hover-underline ink">Technology</a>
+        <a href="#cases" class="hover-underline ink">Cases</a>
+        <a href="#numbers" class="hover-underline ink">Numbers</a>
+      </div>
+      <a href="#contact" class="text-[11px] small-caps border rule px-4 py-2 hover:bg-ink hover:text-[var(--paper)] hover:border-[var(--ink)] transition">Contact &nbsp;→</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="max-w-[1240px] mx-auto px-6 md:px-12 pt-16 md:pt-28 pb-24 md:pb-40">
+    <div class="grid grid-cols-12 gap-6 md:gap-10">
+      <div class="hidden md:flex col-span-1 vrule small-caps text-[11px] muted items-start pt-2">
+        — About&nbsp;Us / 2026
+      </div>
+
+      <div class="col-span-12 md:col-span-8">
+        <div class="text-[11px] small-caps muted mb-8 scribe">A Manifesto</div>
+        <h1 class="display-jp text-[40px] sm:text-[56px] md:text-[80px] ink mb-10">
+          一人一体、<br>
+          <span class="serif italic font-light text-[var(--accent)]">デジタルクローン</span>を<br>
+          持つ時代を、創る。
+        </h1>
+        <p class="mincho text-base md:text-lg leading-loose ink max-w-2xl">
+          AI に「個性」を宿す。<br>
+          私たち AIQ は、人間らしさを再現する独自技術で、<br>
+          ひとりの可能性を 24 時間 365 日、世界中へひらきます。
+        </p>
+      </div>
+
+      <div class="col-span-12 md:col-span-3 md:text-right md:pl-6 md:border-l rule">
+        <div class="text-[11px] small-caps muted mb-2">Edition</div>
+        <div class="num text-4xl ink leading-none mb-6">N°&nbsp;02</div>
+        <div class="text-[11px] small-caps muted mb-2">Founded</div>
+        <div class="num text-2xl ink">2017</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION ESSAY -->
+  <section id="vision" class="border-y rule bg-[var(--paper-2)]/40">
+    <div class="max-w-[1240px] mx-auto px-6 md:px-12 py-20 md:py-28">
+      <div class="grid grid-cols-12 gap-6 md:gap-10">
+        <aside class="col-span-12 md:col-span-3">
+          <div class="border-t-2 border-[var(--ink)] pt-4">
+            <div class="text-[11px] small-caps muted mb-2">Chapter I</div>
+            <div class="display text-3xl md:text-4xl ink">Why<br><em class="italic font-light">Humanity?</em></div>
+          </div>
+        </aside>
+
+        <article class="col-span-12 md:col-span-9 md:pl-10 md:border-l rule space-y-8">
+          <p class="serif italic text-2xl md:text-3xl leading-snug ink font-light">
+            “ AI は機械的で、効率を追求する存在 ——
+            その通説に、私たちは異を唱える。 ”
+          </p>
+          <p class="mincho text-base md:text-[17px] leading-loose ink">
+            人々の生活に寄り添い、本当に役に立つ AI に、人間らしい「個性」は不可欠だと考えています。AIQ が独自に保有する特許技術 <span class="serif italic accent">HUMANISE&nbsp;AI</span> は、一人ひとりの興味・価値観・ライフスタイルを理解し、その「個性」を高精度で再現したデジタルクローンを創り出します。
+          </p>
+          <p class="mincho text-base md:text-[17px] leading-loose muted">
+            これは単に人間の代わりにタスクをこなす存在ではありません。個々人が社会活動や社会貢献に踏み出せる領域が広がり、AI はもっと素晴らしい存在になるはずです。
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY -->
+  <section id="technology" class="max-w-[1240px] mx-auto px-6 md:px-12 py-24 md:py-32">
+    <div class="grid grid-cols-12 gap-6 md:gap-10 mb-12 items-end">
+      <div class="col-span-12 md:col-span-9">
+        <div class="text-[11px] small-caps muted mb-4">Chapter II — Technology</div>
+        <h2 class="display text-5xl md:text-7xl ink">
+          <em class="italic font-light">Humanise</em>&nbsp;AI.
+        </h2>
+        <p class="mincho text-base muted mt-6 max-w-xl leading-relaxed">
+          人格を解像する、AIQ の中核技術。三層のレイヤーで個性を捉え、再現します。
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-3 md:text-right small-caps text-[11px] muted">
+        Patented / Proprietary
+      </div>
+    </div>
+
+    <div class="border-t-2 border-[var(--ink)]">
+      <div class="grid grid-cols-12 gap-0 border-b rule">
+        <div class="col-span-12 md:col-span-1 py-8 num text-3xl marker accent">i.</div>
+        <div class="col-span-12 md:col-span-3 py-8 pr-6">
+          <div class="text-[11px] small-caps muted mb-2">Layer One</div>
+          <div class="serif text-2xl ink">Interest</div>
+          <div class="mincho text-xs muted mt-1">興味</div>
+        </div>
+        <div class="col-span-12 md:col-span-8 py-8 md:pl-10 md:border-l rule">
+          <p class="mincho text-[15px] leading-loose ink">何に惹かれ、何に時間を費やしてきたか。デジタル上の足跡から、その人ならではの関心領域を立体的に捉えます。</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-0 border-b rule">
+        <div class="col-span-12 md:col-span-1 py-8 num text-3xl accent">ii.</div>
+        <div class="col-span-12 md:col-span-3 py-8 pr-6">
+          <div class="text-[11px] small-caps muted mb-2">Layer Two</div>
+          <div class="serif text-2xl ink">Values</div>
+          <div class="mincho text-xs muted mt-1">価値観</div>
+        </div>
+        <div class="col-span-12 md:col-span-8 py-8 md:pl-10 md:border-l rule">
+          <p class="mincho text-[15px] leading-loose ink">何を大切にし、どんな判断軸で選び取るのか。言葉の裏にある「らしさ」を、対話を通して掬い上げます。</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-0">
+        <div class="col-span-12 md:col-span-1 py-8 num text-3xl accent">iii.</div>
+        <div class="col-span-12 md:col-span-3 py-8 pr-6">
+          <div class="text-[11px] small-caps muted mb-2">Layer Three</div>
+          <div class="serif text-2xl ink">Lifestyle</div>
+          <div class="mincho text-xs muted mt-1">ライフスタイル</div>
+        </div>
+        <div class="col-span-12 md:col-span-8 py-8 md:pl-10 md:border-l rule">
+          <p class="mincho text-[15px] leading-loose ink">日々の文脈、振る舞い、口ぐせまで。再現された個性は、ただ似ているのではなく、その人として「在る」。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section id="cases" class="bg-ink">
+    <div class="max-w-[1240px] mx-auto px-6 md:px-12 py-24 md:py-32">
+      <div class="grid grid-cols-12 gap-6 md:gap-10 mb-16">
+        <div class="col-span-12 md:col-span-8">
+          <div class="text-[11px] small-caps muted mb-4">Chapter III — In Practice</div>
+          <h2 class="display text-5xl md:text-7xl text-[var(--paper)]">
+            個性が、<em class="italic font-light text-[var(--accent-soft)]">仕事を</em>する。
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#2b2a2c]">
+        <div class="bg-ink p-10 md:p-14">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="num text-2xl text-[var(--accent-soft)]">01</span>
+            <span class="text-[11px] small-caps muted">Apparel</span>
+          </div>
+          <div class="serif text-3xl md:text-4xl text-[var(--paper)] leading-tight mb-6">
+            スタッフの<em class="italic font-light">センス</em>が、<br>
+            画面の向こうに立つ。
+          </div>
+          <p class="mincho text-[15px] leading-loose text-[var(--paper)]/80">
+            アパレルショップでは、スタッフのデジタルクローンが固有の「ファッションセンス」や「接客スタイル」を再現。お客様の要望をより深く理解し、最適な一着をご提案します。
+          </p>
+        </div>
+
+        <div class="bg-ink p-10 md:p-14">
+          <div class="flex items-center gap-3 mb-8">
+            <span class="num text-2xl text-[var(--accent-soft)]">02</span>
+            <span class="text-[11px] small-caps muted">Cosmetics</span>
+          </div>
+          <div class="serif text-3xl md:text-4xl text-[var(--paper)] leading-tight mb-6">
+            購入者の<em class="italic font-light">声なき声</em>を、<br>
+            開発の現場へ。
+          </div>
+          <p class="mincho text-[15px] leading-loose text-[var(--paper)]/80">
+            化粧品メーカーでは、購入者のデジタルクローンが嗜好やニーズを再現し、商品開発者へとリアルな手触りで届けます。次の一品は、その対話から生まれます。
+          </p>
+        </div>
+      </div>
+
+      <p class="serif italic text-2xl md:text-3xl text-[var(--paper)] font-light mt-20 md:mt-24 max-w-3xl leading-snug">
+        “ 24 時間・365 日、世界中どこでも、その人の代わりに活動するデジタルクローンによって、一人ひとりの個性が新たな価値を生み出せる社会を。 ”
+      </p>
+    </div>
+  </section>
+
+  <!-- NUMBERS -->
+  <section id="numbers" class="max-w-[1240px] mx-auto px-6 md:px-12 py-24 md:py-32">
+    <div class="grid grid-cols-12 gap-6 md:gap-10 mb-16 items-end">
+      <div class="col-span-12 md:col-span-9">
+        <div class="text-[11px] small-caps muted mb-4">Chapter IV — By the Numbers</div>
+        <h2 class="display text-5xl md:text-7xl ink">
+          実績で、<em class="italic font-light accent">語る</em>。
+        </h2>
+      </div>
+      <div class="col-span-12 md:col-span-3 md:text-right small-caps text-[11px] muted">
+        As of Jan. 2025
+      </div>
+    </div>
+
+    <div class="border-t-2 border-[var(--ink)] grid grid-cols-1 md:grid-cols-3">
+      <div class="p-10 md:p-14 border-b md:border-b-0 md:border-r rule">
+        <div class="text-[11px] small-caps muted mb-6">Companies Served</div>
+        <div class="flex items-baseline gap-3">
+          <span class="stat-num text-[120px] md:text-[150px] ink">1,100</span>
+          <span class="mincho text-2xl ink">社</span>
+        </div>
+        <div class="border-t rule pt-3 mt-6">
+          <div class="serif text-lg ink">累計利用企業</div>
+          <div class="text-[10px] small-caps muted mt-1">※ 2025 年 1 月末時点</div>
+        </div>
+      </div>
+
+      <div class="p-10 md:p-14 border-b md:border-b-0 md:border-r rule">
+        <div class="text-[11px] small-caps muted mb-6">Patents Filed</div>
+        <div class="flex items-baseline gap-3">
+          <span class="stat-num text-[120px] md:text-[150px] ink">40</span>
+          <span class="mincho text-2xl ink">件</span>
+        </div>
+        <div class="border-t rule pt-3 mt-6">
+          <div class="serif text-lg ink">特許技術数</div>
+          <div class="text-[10px] small-caps muted mt-1">※ 出願込み &nbsp;/&nbsp; 2025 年 1 月末時点</div>
+        </div>
+      </div>
+
+      <div class="p-10 md:p-14">
+        <div class="text-[11px] small-caps muted mb-6">Clones Operated</div>
+        <div class="flex items-baseline gap-3">
+          <span class="stat-num text-[120px] md:text-[150px] ink">500</span>
+          <span class="mincho text-2xl ink">体&nbsp;+</span>
+        </div>
+        <div class="border-t rule pt-3 mt-6">
+          <div class="serif text-lg ink">クローン生成・運用数</div>
+          <div class="text-[10px] small-caps muted mt-1">※ 2025 年 1 月末時点</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section id="contact" class="border-t rule">
+    <div class="max-w-[1240px] mx-auto px-6 md:px-12 py-20 md:py-28">
+      <div class="grid grid-cols-12 gap-6 md:gap-10 items-end">
+        <div class="col-span-12 md:col-span-8">
+          <div class="text-[11px] small-caps muted mb-4">— fin.</div>
+          <h3 class="display-jp text-3xl md:text-5xl ink leading-tight">
+            あなたの<span class="serif italic accent">個性</span>を、<br>
+            次の時代へ。
+          </h3>
+        </div>
+        <div class="col-span-12 md:col-span-4 md:text-right">
+          <a href="mailto:contact@aiq.example" class="inline-block border-2 border-[var(--ink)] px-8 py-4 small-caps text-sm hover:bg-ink hover:text-[var(--paper)] transition">
+            Contact AIQ &nbsp;→
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLOPHON -->
+  <footer class="border-t rule">
+    <div class="max-w-[1240px] mx-auto px-6 md:px-12 py-8 grid grid-cols-12 gap-6 items-end">
+      <div class="col-span-12 md:col-span-6">
+        <div class="text-[11px] small-caps muted mb-1">Colophon</div>
+        <div class="serif italic text-base ink">AIQ — Humanise AI.</div>
+      </div>
+      <div class="col-span-6 md:col-span-3 small-caps text-[11px] muted">
+        About / Vol. 02
+      </div>
+      <div class="col-span-6 md:col-span-3 md:text-right small-caps text-[11px] muted">
+        © AIQ Inc.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

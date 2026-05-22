@@ -3,38 +3,249 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claude Code 講習会 デモ</title>
+  <title>The Claude Code Workshop — Vol.02</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #14110f;
+      --paper: #f6f2ec;
+      --paper-2: #ede7dd;
+      --muted: #6b645c;
+      --rule: #d8d1c5;
+      --accent: #8a3a2a;
+    }
+    html, body { background: var(--paper); color: var(--ink); }
+    body {
+      font-family: 'Inter', 'Shippori Mincho', serif;
+      font-feature-settings: "ss01", "ss02", "kern";
+      -webkit-font-smoothing: antialiased;
+    }
+    .serif { font-family: 'Cormorant Garamond', 'Shippori Mincho', serif; }
+    .mincho { font-family: 'Shippori Mincho', 'Cormorant Garamond', serif; }
+    .display {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      line-height: 0.92;
+    }
+    .rule { border-color: var(--rule); }
+    .ink { color: var(--ink); }
+    .muted { color: var(--muted); }
+    .small-caps {
+      font-variant-caps: all-small-caps;
+      letter-spacing: 0.22em;
+      font-weight: 500;
+    }
+    .num {
+      font-family: 'Cormorant Garamond', serif;
+      font-variant-numeric: tabular-nums oldstyle-nums;
+      font-weight: 400;
+    }
+    .grain {
+      background-image:
+        radial-gradient(rgba(20,17,15,0.025) 1px, transparent 1px);
+      background-size: 3px 3px;
+    }
+    .hover-underline {
+      background-image: linear-gradient(currentColor, currentColor);
+      background-size: 0% 1px;
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      transition: background-size 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+    }
+    .hover-underline:hover { background-size: 100% 1px; }
+    .drop-cap::first-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.2em;
+      line-height: 0.85;
+      float: left;
+      padding: 0.05em 0.12em 0 0;
+      font-weight: 500;
+      color: var(--accent);
+    }
+    .card-row { transition: background-color 0.3s ease; }
+    .card-row:hover { background-color: rgba(20,17,15,0.03); }
+    .marker { color: var(--accent); }
+  </style>
 </head>
-<body class="bg-gray-50 min-h-screen">
-  <div class="max-w-4xl mx-auto p-8">
+<body class="grain">
 
-    <header class="mb-12 text-center">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Claude Code 講習会 デモ</h1>
-      <p class="text-gray-600">指示するだけで、変更から PR まで</p>
+  <div class="max-w-[1180px] mx-auto px-6 md:px-12 py-8 md:py-12">
+
+    <!-- MASTHEAD -->
+    <header class="border-b rule pb-6 mb-12 md:mb-20">
+      <div class="flex items-center justify-between text-[11px] small-caps muted">
+        <span>Vol. 02 &nbsp;·&nbsp; The Workshop Journal</span>
+        <span class="hidden md:inline">An edition by Claude Code</span>
+        <span class="num text-sm tracking-normal" style="font-variant: normal;">2026 . 05 . 22</span>
+      </div>
     </header>
 
-    <section class="mb-12">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-6">参加者のページ</h2>
-      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!--
-          受講者の皆さんへ：
-          自分のページを作ったら、以下の形式で1行追加してください。
-          Claudeに「index.htmlの参加者リンク一覧に、私のページ <名前>.html を追加して」と頼んでもOKです。
-        -->
-        <li>
-          <a href="participants/_template.html"
-             class="block p-4 bg-white rounded-lg shadow hover:shadow-md transition text-blue-600">
-            サンプル（テンプレ）
-          </a>
-        </li>
-      </ul>
+    <!-- HERO -->
+    <section class="grid grid-cols-12 gap-6 md:gap-10 mb-20 md:mb-32">
+      <div class="col-span-12 md:col-span-2">
+        <div class="text-[11px] small-caps muted mb-2">Issue</div>
+        <div class="num text-3xl marker leading-none">N°&nbsp;02</div>
+      </div>
+
+      <div class="col-span-12 md:col-span-8">
+        <div class="text-[11px] small-caps muted mb-6">— Cover Story —</div>
+        <h1 class="display text-[64px] sm:text-[88px] md:text-[132px] ink mb-6">
+          The<br>
+          <em class="italic font-light">Claude&nbsp;Code</em><br>
+          Workshop.
+        </h1>
+        <div class="flex items-center gap-4 mt-8">
+          <span class="block h-px w-16 bg-current ink"></span>
+          <p class="mincho text-base md:text-lg leading-relaxed max-w-xl">
+            指示するだけで、<span class="serif italic">変更</span>から
+            <span class="serif italic">プルリクエスト</span>まで。
+          </p>
+        </div>
+      </div>
+
+      <div class="col-span-12 md:col-span-2 md:text-right">
+        <div class="text-[11px] small-caps muted mb-2">Pages</div>
+        <div class="num text-3xl ink leading-none">016</div>
+      </div>
     </section>
 
-    <footer class="mt-16 text-center text-gray-500 text-sm">
-      <p>Claude Code 講習会 第２回 / Powered by Claude Code</p>
+    <!-- LEAD ESSAY -->
+    <section class="grid grid-cols-12 gap-6 md:gap-10 mb-20 md:mb-28">
+      <aside class="col-span-12 md:col-span-3">
+        <div class="border-t rule pt-3">
+          <div class="text-[11px] small-caps muted mb-3">Editor's Note</div>
+          <div class="mincho text-sm leading-relaxed muted">
+            第2回となる本誌では、自然言語による開発体験を実演を通して紐解きます。
+          </div>
+        </div>
+      </aside>
+
+      <article class="col-span-12 md:col-span-9 md:pl-10 md:border-l rule">
+        <p class="serif text-2xl md:text-3xl leading-snug ink font-light italic mb-8">
+          “ コードを書くのではなく、伝える。 ”
+        </p>
+        <p class="mincho text-base leading-loose ink drop-cap">
+          話すように指示するだけで、変更からコミット、プルリクエストまでが一筋の流れになる。手を動かす時間は短くなり、考える時間が増える。本誌はその新しい所作を、参加者一人ひとりの実作を通して記録するための小さな雑誌である。
+        </p>
+      </article>
+    </section>
+
+    <!-- INDEX OF PARTICIPANTS -->
+    <section class="mb-20 md:mb-28">
+      <div class="grid grid-cols-12 gap-6 md:gap-10 mb-8 items-end">
+        <div class="col-span-12 md:col-span-9">
+          <div class="text-[11px] small-caps muted mb-3">Table of Contents</div>
+          <h2 class="display text-5xl md:text-7xl ink">参加者のページ</h2>
+        </div>
+        <div class="col-span-12 md:col-span-3 md:text-right">
+          <div class="text-[11px] small-caps muted">Contributors</div>
+          <div class="num text-2xl ink">01<span class="muted">&nbsp;/&nbsp;∞</span></div>
+        </div>
+      </div>
+
+      <div class="border-t-2 border-b rule">
+        <!--
+          受講者の皆さんへ：
+          自分のページを作ったら、以下の <li> をコピーして1行追加してください。
+          Claudeに「index.htmlの参加者リンク一覧に、私のページ <名前>.html を追加して」と頼んでもOKです。
+        -->
+        <ul>
+          <li class="card-row border-b rule">
+            <a href="participants/_template.html" class="grid grid-cols-12 gap-4 md:gap-8 items-baseline py-6 md:py-8 px-1">
+              <div class="col-span-2 md:col-span-1 num text-2xl marker">01</div>
+              <div class="col-span-8 md:col-span-7">
+                <div class="text-[10px] small-caps muted mb-1">Sample · Template</div>
+                <div class="serif text-2xl md:text-3xl ink hover-underline inline">
+                  サンプル（テンプレ）
+                </div>
+                <div class="mincho text-sm muted mt-2">最初の一歩はここから。複製して、あなたの一頁を。</div>
+              </div>
+              <div class="hidden md:block col-span-2 small-caps text-[11px] muted">_template.html</div>
+              <div class="col-span-2 md:col-span-2 text-right small-caps text-[11px] muted">Read &nbsp;→</div>
+            </a>
+          </li>
+
+          <!-- 空席 -->
+          <li class="border-b rule">
+            <div class="grid grid-cols-12 gap-4 md:gap-8 items-baseline py-6 md:py-8 px-1 opacity-50">
+              <div class="col-span-2 md:col-span-1 num text-2xl muted">02</div>
+              <div class="col-span-8 md:col-span-7">
+                <div class="text-[10px] small-caps muted mb-1">Reserved</div>
+                <div class="serif italic text-2xl md:text-3xl muted">— vacant —</div>
+              </div>
+              <div class="hidden md:block col-span-2 small-caps text-[11px] muted">your-page.html</div>
+              <div class="col-span-2 md:col-span-2 text-right small-caps text-[11px] muted">Coming</div>
+            </div>
+          </li>
+          <li>
+            <div class="grid grid-cols-12 gap-4 md:gap-8 items-baseline py-6 md:py-8 px-1 opacity-40">
+              <div class="col-span-2 md:col-span-1 num text-2xl muted">03</div>
+              <div class="col-span-8 md:col-span-7">
+                <div class="text-[10px] small-caps muted mb-1">Reserved</div>
+                <div class="serif italic text-2xl md:text-3xl muted">— vacant —</div>
+              </div>
+              <div class="hidden md:block col-span-2 small-caps text-[11px] muted">your-page.html</div>
+              <div class="col-span-2 md:col-span-2 text-right small-caps text-[11px] muted">Coming</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HOW TO JOIN -->
+    <section class="grid grid-cols-12 gap-6 md:gap-10 mb-24 md:mb-32">
+      <div class="col-span-12 md:col-span-4">
+        <div class="text-[11px] small-caps muted mb-3">How to Contribute</div>
+        <h3 class="display text-4xl md:text-5xl ink leading-tight">あなたの<br><em class="italic font-light">一頁</em>を、<br>この誌面に。</h3>
+      </div>
+
+      <div class="col-span-12 md:col-span-8 md:pl-10 md:border-l rule space-y-8">
+        <div class="grid grid-cols-12 gap-4 items-start">
+          <div class="col-span-2 num text-3xl marker">i.</div>
+          <div class="col-span-10">
+            <div class="serif text-xl ink mb-1">Claude に依頼する</div>
+            <p class="mincho text-sm leading-relaxed muted">「自分のページを作って」と話しかけるだけで、雛形が生成されます。</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-12 gap-4 items-start">
+          <div class="col-span-2 num text-3xl marker">ii.</div>
+          <div class="col-span-10">
+            <div class="serif text-xl ink mb-1">対話で整える</div>
+            <p class="mincho text-sm leading-relaxed muted">色、文体、構成。気の済むまで、自然な言葉で調整できます。</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-12 gap-4 items-start">
+          <div class="col-span-2 num text-3xl marker">iii.</div>
+          <div class="col-span-10">
+            <div class="serif text-xl ink mb-1">プルリクエストまで</div>
+            <p class="mincho text-sm leading-relaxed muted">コミットも PR も一気通貫。あとは載るのを待つだけ。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLOPHON -->
+    <footer class="border-t rule pt-6 pb-4">
+      <div class="grid grid-cols-12 gap-6 items-end">
+        <div class="col-span-12 md:col-span-6">
+          <div class="text-[11px] small-caps muted mb-2">Colophon</div>
+          <div class="serif italic text-lg ink">The Claude Code Workshop Journal</div>
+          <div class="mincho text-xs muted mt-1">Edited &amp; typeset with Claude Code · Set in Cormorant Garamond &amp; Shippori Mincho.</div>
+        </div>
+        <div class="col-span-6 md:col-span-3 small-caps text-[11px] muted">
+          Vol. 02 / 2026
+        </div>
+        <div class="col-span-6 md:col-span-3 md:text-right small-caps text-[11px] muted">
+          © Anthropic ·  fin.
+        </div>
+      </div>
     </footer>
 
   </div>
+
 </body>
 </html>
